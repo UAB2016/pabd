@@ -1,3 +1,17 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+    prefix:   /{_locale}
+    requirements:
+        _locale: '%locale%'
+    defaults:
+        _locale: '%locale%'
+
+homepage:
+    path: /{_locale}
+    requirements:
+        _locale: '%locale%'
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    default/homepage.html.twig
+        _locale:     '%locale%'
