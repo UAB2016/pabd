@@ -7,10 +7,12 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    app.notifications.email_sender: anonymous@example.com
 
 framework:
-    #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    ide: sublime	
+    esi:             { enabled: true }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -29,11 +31,25 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
-
+    assets: ~	
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form_themes:
+        - "bootstrap_3_layout.html.twig"
+        - "form/fields.html.twig"
+# Assetic Configuration (used for managing web assets: CSS, JavaScript, Sass, etc.)
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ ]
+    filters:
+        cssrewrite: ~
+        jsqueeze: ~
+        scssphp:
+            # the formatter must be the FQCN (don't use the 'compressed' value)
+            formatter: "Leafo\\ScssPhp\\Formatter\\Compressed"
 
 # Doctrine Configuration
 doctrine:
