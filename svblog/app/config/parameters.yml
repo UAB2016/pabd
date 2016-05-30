@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3307
+    database_name: svblog
+    database_user: root
+    database_password: taticu
+    mailer_transport: gmail
+    mailer_host: smtp.gmail.com
+    mailer_user: vasipos
+    mailer_password: 'Parola mea'
+    secret: 0f8ef07dde730b6bf85d8e4313fc922914a44520
