@@ -1,0 +1,8 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Adauga un comentariu{% endblock%}
+
+{% block body %}
+    <h1>Adauga un comentariu pentru postarea "{{ comment.blog.title }}"</h1>
+    {% include 'BloggerBlogBundle:Comment:form.html.twig' with { 'form': form } %}
+{% endblock %}
