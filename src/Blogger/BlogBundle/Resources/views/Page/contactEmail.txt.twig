@@ -1,0 +1,7 @@
+{# src/Blogger/BlogBundle/Resources/views/Page/contactEmail.txt.twig #}
+Mesajul a fost trimis de {{ enquiry.name }} la {{ "now" | date("Y-m-d H:i") }}.
+
+Reply-To: {{ enquiry.email }}
+Subject: {{ enquiry.subject }}
+Body:
+{{ enquiry.body }}
