@@ -2,6 +2,18 @@ blogger_blog:
     resource: "@BloggerBlogBundle/Resources/config/routing.yml"
     prefix:   /
 
+adauga_adaugau:
+    resource: "@AdaugaAdaugauBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+adaugau:
+    path: /adaugau
+    defaults: {_controller: AdaugaAdaugauBundle:Adaugau:adauga}	
+
+despre_camelia:
+    path: /despre_camelia
+    defaults: {_controller: AppBundle:DespreCamelia:indexcamelia}
