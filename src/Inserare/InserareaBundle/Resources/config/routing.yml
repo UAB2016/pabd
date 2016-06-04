@@ -1,0 +1,3 @@
+inserare_inserarea_homepage:
+    path:     /
+    defaults: { _controller: InserareInserareaBundle:Default:index }

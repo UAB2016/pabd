@@ -17,3 +17,15 @@ adaugau:
 despre_camelia:
     path: /despre_camelia
     defaults: {_controller: AppBundle:DespreCamelia:indexcamelia}
+    
+despre_ordace:
+    path: /despre_ordace
+    defaults: {_controller: AppBundle:DespreOrdace:indexordace}
+    
+inserare_inserarea:
+    resource: "@InserareInserareaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+inserare_admin:
+    path: /inserare_admin
+    defaults: {_controller: InserareInserareaBundle:Inserarea:inserare}
