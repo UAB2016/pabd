@@ -1,6 +1,11 @@
+pabd2_buzenco:
+    resource: "@PABD2BuzencoBundle/Controller/"
+    type:     annotation
+    prefix:   /buzenco
+
 blogger_blog:
     resource: "@BloggerBlogBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /svblog
 
 app:
     resource: "@AppBundle/Controller/"
