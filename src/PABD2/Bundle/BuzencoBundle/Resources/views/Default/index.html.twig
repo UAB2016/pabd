@@ -1,1 +1,65 @@
-Hello World!
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Alucard Hellsing - Gallery</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+         {% stylesheets filter='cssrewrite' 
+            output='css/pabd2_buz.css' 'bundles/pabd2buzenco/css/*'
+         %}
+            <link href="{{ asset_url }}" rel="stylesheet" media="screen" />
+        {% endstylesheets %}
+    </head>
+    <body>
+        <div style=" text-align:center; margin:35px auto;">
+                
+            <h3 style="font-family:Algerian; font-weight:bold; font-size:50px; letter-spacing:-1px; padding:0 0 10px 0; line-height:40px;">ALUCARD HELLSING Gallery :</h3>
+            <p style="padding:10px 0 0 0; font-style:italic;font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif; font-size:14px;">Pentru a vizualiza mai multe informatii, prestati <strong><a href="http://hellsing.wikia.com/wiki/Alucard">AICI</a></strong></p>
+        <div id="container">
+                <ul>
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto01.jpg') }}" />
+                        <a class="next red" href="#">next</a>
+                    </li>
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto02.jpg') }}">
+                        <a class="next orange" href="#">next</a>
+                        <a class="previous orange" href="#">prev</a>
+                    </li>
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto03.jpg') }}" >
+                        <a class="next green" href="#">next</a>
+                        <a class="previous green" href="#">prev</a>
+                    </li>
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto04.jpg') }}" >
+                        <a class="next blue" href="#">next</a>
+                        <a class="previous blue" href="#">prev</a>
+                    </li>              
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto12.jpg') }}" >
+                        <a class="next orange" href="#">next</a>
+                        <a class="previous orange" href="#">prev</a>
+                    </li>                                  
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto06.jpg') }}" >
+                        <a class="next green" href="#">next</a>
+                        <a class="previous green" href="#">prev</a>
+                    </li>
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto07.jpg') }}" >
+                        <a class="next blue" href="#">next</a>
+                        <a class="previous blue" href="#">prev</a>
+                    </li>
+                    <li>
+                        <img id="test" src="{{ asset('bundles/pabd2buzenco/images/foto08.jpg') }}" >
+                        <a class="previous silver" href="#">prev</a>
+                        <a class="startover" href="#">startover</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% javascripts '@PABD2BuzencoBundle/Resources/public/js/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    </body>
+</html>
