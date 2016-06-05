@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Blogger\BlogBundle\BloggerBlogBundle(),
 			new Adauga\AdaugauBundle\AdaugaAdaugauBundle(),
+			new Inserare\InserareaBundle\InserareInserareaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

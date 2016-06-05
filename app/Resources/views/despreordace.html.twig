@@ -1,0 +1,58 @@
+{% block stylesheets %}
+    
+		<link rel="stylesheet" href="{{ asset('css/style_o.css') }}" />
+   
+{% endblock %}
+<h1 style="text-align:center;">Pagina personala Daniela</h1>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+
+
+<html>
+<head>
+<script type="text/javascript">
+
+function start_pos()
+{
+document.getElementById("img").style.top = '50px';
+document.getElementById("img").style.left = '600px'
+}
+
+function right() //Moves image to the right
+
+{
+document.getElementById("img").style.top = '50px';
+document.getElementById("img").style.left = '1000px';
+}
+
+function left() //moves image to the left
+
+{
+document.getElementById("img").style.top = '50px';
+document.getElementById("img").style.left = '120px';
+}
+
+</script>
+<title>Despre Daniela</title>
+</head>
+
+
+<body>
+
+<style>
+DIV.movable { position:absolute; TOP:50px; LEFT:600px; }
+</style>
+
+<div id="img" class="movable">
+{% image '@AppBundle/Resources/public/images/example_o.jpg' %}
+    <img style="width: 60%;" id="soare" src="{{ asset_url }}" alt="Imagine" />
+{% endimage %}
+</div <!image>
+
+<p style="margin-top:250px;text-align:center;"> 
+<button type="button" onclick = "left()">Pozitionare stanga</button> 
+<button type="button" onclick = "start_pos()">Resetare</button> 
+<button type="button" onclick = "right()">Pozitionare dreapta</button> 
+</p>
+
+</body>
+</html>
