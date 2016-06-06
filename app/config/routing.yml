@@ -5,7 +5,8 @@ pabd2_buzenco:
 
 blogger_blog:
     resource: "@BloggerBlogBundle/Resources/config/routing.yml"
-    
+    prefix:   /
+
 adauga_adaugau:
     resource: "@AdaugaAdaugauBundle/Resources/config/routing.yml"
     prefix:   /
