@@ -20,9 +20,10 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new Blogger\BlogBundle\BloggerBlogBundle(),
- new Blogger\BlogBundle\BloggerBlogBundle(),
 			new Adauga\AdaugauBundle\AdaugaAdaugauBundle(),
-			new Inserare\InserareaBundle\InserareInserareaBundle(),            new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle(),        );
+			new Inserare\InserareaBundle\InserareInserareaBundle(), 
+			new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle()
+        ); 
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
