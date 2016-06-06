@@ -6,3 +6,9 @@ services:
         class: Blogger\BlogBundle\Twig\Extensions\BloggerBlogExtension
         tags:
             - { name: twig.extension }
+services:
+    security.authentication.success_handler:
+        class: Blogger\BlogBundle\Handler\AuthenticationSuccessHandler
+        arguments: [@security.http_utils, @service_container, {}]
+        tags:
+            - { name: 'monolog.logger', channel: 'security'}
