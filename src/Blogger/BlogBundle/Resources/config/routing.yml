@@ -65,3 +65,38 @@ BloggerBlogBundle_admin_blog_delete:
     defaults: { _controller: BloggerBlogBundle:Admin:delete }
     requirements:
         _method:  GET
+BloggerBlogBundle_cocos:
+    pattern:  /cocos
+    defaults: { _controller: BloggerBlogBundle:Page:cocos }
+    requirements:
+        _method:  GET
+BloggerBlogBundle_inregistrare:
+    pattern:  /inregistrare
+    defaults: { _controller: BloggerBlogBundle:Registration:inregistrare }
+    requirements:
+        _method:  GET|POST
+BloggerBlogBundle_admin_useri_index:
+    pattern:  /admin/useri
+    defaults: { _controller: BloggerBlogBundle:User:index }
+    requirements:
+        _method:  GET
+BloggerBlogBundle_admin_user_add:
+    pattern:  /admin/user/add
+    defaults: { _controller: BloggerBlogBundle:User:create }
+    requirements:
+        _method:  GET|POST
+BloggerBlogBundle_admin_user_show:
+    pattern:  /admin/user/{id}
+    defaults: { _controller: BloggerBlogBundle:User:show }
+    requirements:
+        _method:  GET
+BloggerBlogBundle_admin_user_edit:
+    pattern:  /admin/user/{id}/edit
+    defaults: { _controller: BloggerBlogBundle:User:edit }
+    requirements:
+        _method:  GET|POST
+BloggerBlogBundle_admin_user_delete:
+    pattern:  /admin/user/{id}/delete
+    defaults: { _controller: BloggerBlogBundle:User:delete }
+    requirements:
+        _method:  GET

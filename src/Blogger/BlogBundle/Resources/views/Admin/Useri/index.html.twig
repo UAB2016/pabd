@@ -1,0 +1,47 @@
+
+{# src /Blogger/BlogBundle/Resources/views/Admin/Useri/index.html.twig #}
+{% extends 'BloggerBlogBundle:Admin:base.html.twig' %}
+
+
+{% block contentHeader %}
+     Useri <small>lista useri</small>
+{% endblock %}
+{% block body %}
+	<div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Useri</h3>
+                    <div class="box-tools">
+                        <a href="{{ path('BloggerBlogBundle_admin_user_add') }}" class="btn btn-box-tool" data-toggle="tooltip" title="Create" data-widget="chat-pane-toggle" data-original-title="Create"><i class="fa fa-plus"></i> Create</a>
+                    </div>
+                </div>
+                
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <tr>
+                                <th>Id</th>
+                                <th>Nume Prenume</th>
+                                <th>Email</th>
+                                <th>&nbsp;</th>
+                            </tr>  
+							{% for user in useri %}
+                                <tr>
+                                    <td>{{ user.id }}</td>
+                                    <td><a href="{{ path('BloggerBlogBundle_admin_user_show', { 'id': user.id }) }}">{{ user.nume }} {{ user.prenume }} </a></td>
+                                    <td>{{ user.email }}</td>
+                                    <td class="text-right">
+                                        <a href="{{ path('BloggerBlogBundle_admin_user_show', { 'id': user.id }) }}" class="btn btn-success btn-xs">view</a>
+                                        <a href="{{ path('BloggerBlogBundle_admin_user_edit', { 'id': user.id }) }}" class="btn btn-warning btn-xs">edit</a>
+                                        <a href="{{ path('BloggerBlogBundle_admin_user_delete', { 'id': user.id }) }}" class="btn btn-danger btn-xs confirm-action">delete</a>
+                                    </td>
+                                </tr>
+                                {% else %}
+								<p>Nu sunt useri</p>
+							{% endfor %}
+                        </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

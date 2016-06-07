@@ -1,0 +1,11 @@
+
+				
+{{ form_start(form) }}
+    {{ form_row(form.nume) }}
+	{{ form_row(form.prenume) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+    <button type="submit">Inregistrare!</button>
+{{ form_end(form) }}
