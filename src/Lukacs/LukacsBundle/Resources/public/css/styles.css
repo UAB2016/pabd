@@ -1,0 +1,60 @@
+body
+{	
+	background: url('../images/fundalpage.jpg');
+}
+
+.imgAdrian{
+	width: 600px;
+	height: 400px;
+	background: url('../images/portret.jpg');
+	background-size: 600px 400px;
+}
+p {
+    text-align: justify;
+   
+}
+h2{
+    float:right;
+}
+
+#table{
+    margin-left:407px;
+}
+
+.menu {
+    background-color: black;
+    color:white;
+    font-size: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+}
+
+.subiect {
+    font-size: 25px;
+    color: blue;
+    padding-bottom: 10px;
+}
+
+.mesaj {
+    font-size: 25px;
+    color: blue;
+    padding-bottom: 10px;
+}
+.email {
+    font-size: 25px;
+    color: blue;
+    padding-bottom: 10px;
+}
+.telefon {
+    font-size: 25px;
+    color: blue;
+    padding-bottom: 10px;
+}
+#button {
+
+   box-sizing: content-box
+}
