@@ -1,0 +1,66 @@
+{% block stylesheets %}
+    
+		<link rel="stylesheet" href="{{ asset('css/style_a.css') }}" />
+   
+{% endblock %}
+<h1 style="text-align:center;">Pagina Fani Liverpool</h1>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+
+
+<html>
+<head>
+<script type="text/javascript">
+
+function start_pos()
+{
+document.getElementById("img").style.top = '50px';
+document.getElementById("img").style.left = '600px'
+}
+
+function right() //Moves image to the right
+
+{
+document.getElementById("img").style.top = '50px';
+document.getElementById("img").style.left = '1000px';
+}
+
+function left() //moves image to the left
+
+{
+document.getElementById("img").style.top = '50px';
+document.getElementById("img").style.left = '120px';
+}
+
+</script>
+<title>Despre Andrei</title>
+</head>
+
+
+<body>
+
+<style>
+DIV.movable { position:absolute; TOP:50px; LEFT:600px; }
+</style>
+
+<div id="img" class="movable">
+{% image '@AppBundle/Resources/public/images/andrei.png' %}
+    <img style="width: 60%; margin-top:50px;" id="soare" src="{{ asset_url }}" alt="Imagine" />
+{% endimage %}
+</div <!image>
+
+
+<p style="margin-top:250px;text-align:center;"> 
+<button type="button" onclick = "left()">Pozitionare stanga</button> 
+<button type="button" onclick = "start_pos()">Resetare</button> 
+<button type="button" onclick = "right()">Pozitionare dreapta</button> 
+</p>
+<h2 style="text-align:center;">
+Formular de inscriere in fanclub Liverpool
+</h2>
+<p style="text-align:center;">
+<button> <a href="http://127.0.0.1:8000/adaugafani">
+</p>
+Inscriere
+</button>
+</body>
+</html>
