@@ -15,6 +15,14 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+user_routes:
+    resource: "@BloggerBlogBundle/Controller"
+    type: annotation
+
+admin:
+    path:      /admin
+    defaults:  { _controller: AppBundle:Admin:index }
+
 adaugau:
     path: /adaugau
     defaults: {_controller: AdaugaAdaugauBundle:Adaugau:adauga}	
@@ -22,11 +30,11 @@ adaugau:
 despre_camelia:
     path: /despre_camelia
     defaults: {_controller: AppBundle:DespreCamelia:indexcamelia}
-    
+
 despre_ordace:
     path: /despre_ordace
     defaults: {_controller: AppBundle:DespreOrdace:indexordace}
-    
+
 inserare_inserarea:
     resource: "@InserareInserareaBundle/Resources/config/routing.yml"
     prefix:   /

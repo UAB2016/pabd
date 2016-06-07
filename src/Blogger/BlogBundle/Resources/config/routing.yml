@@ -26,3 +26,42 @@ BloggerBlogBundle_comment_create:
     requirements:
         _method:  POST
         blog_id: \d+
+login:
+    pattern:  /login
+    defaults: { _controller: BloggerBlogBundle:Security:login }
+    requirements:
+        _method:  GET
+login_check:
+    pattern:  /login_check
+after_login:
+    path: /login_after
+BloggerBlogBundle_admin:
+    pattern:  /admin
+    defaults: { _controller: BloggerBlogBundle:Admin:index }
+    requirements:
+        _method:  GET
+BloggerBlogBundle_admin_blog_add:
+    pattern:  /admin/articol/add
+    defaults: { _controller: BloggerBlogBundle:Admin:create }
+    requirements:
+        _method:  GET|POST
+BloggerBlogBundle_admin_blog_add_store:
+    pattern:  /admin/articol/add/store
+    defaults: { _controller: BloggerBlogBundle:Admin:store }
+    requirements:
+        _method:  POST
+BloggerBlogBundle_admin_blog_show:
+    pattern:  /admin/articol/{id}
+    defaults: { _controller: BloggerBlogBundle:Admin:show }
+    requirements:
+        _method:  GET
+BloggerBlogBundle_admin_blog_edit:
+    pattern:  /admin/articol/{id}/edit
+    defaults: { _controller: BloggerBlogBundle:Admin:edit }
+    requirements:
+        _method:   GET|POST
+BloggerBlogBundle_admin_blog_delete:
+    pattern:  /admin/articol/{id}/delete
+    defaults: { _controller: BloggerBlogBundle:Admin:delete }
+    requirements:
+        _method:  GET

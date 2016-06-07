@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <title>{% block title %} Admin {% endblock %} - svblog</title>
+        <!--[if lt IE 9]>
+        <![endif]-->
+		{% block stylesheets %}
+			{% stylesheets 'bundles/admin/css/*' %}
+				<link rel="stylesheet" href="{{ asset_url }}" />
+			{% endstylesheets %}
+		{% endblock %}
+		
+		 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="skin-blue sidebar-mini">
+	
+		<div class="wrapper">
+			{% block header %}
+				<header class="main-header">
+				<a href="" class="logo">
+					<span class="logo-mini"><b>A</b></span>
+					<span class="logo-lg"><b>Admin</b>Dashboard</span>
+				</a>
+
+				<nav class="navbar navbar-static-top" role="navigation">
+					<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+						<span class="sr-only">Toggle navigation</span>
+					</a>
+					<div class="navbar-custom-menu">
+						<ul class="nav navbar-nav">
+							<li><a href=""></a></li>
+							<li><a href="">Logout</a></li>
+						</ul>
+					</div>
+				</nav>
+				</header>
+			{% endblock %}
+			
+			{% block sidebar %}
+				<aside class="main-sidebar">
+					<section class="sidebar">
+						<ul class="sidebar-menu">
+							<li class="header">Main Menu</li>
+							<li ><a href=""><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+							<li ><a href=""><i class="fa fa-dashboard"></i> <span>Articole</span></a></li>
+							<li ><a href=""><i class="fa fa-dashboard"></i> <span>Useri</span></a></li>
+							<li ><a href=""><i class="fa fa-dashboard"></i> <span>Logout</span></a></li>
+
+						</ul>
+
+					</section>
+				</aside>				
+			{% endblock %}
+			
+			
+			<div class="content-wrapper">
+				<section class="content-header">
+					<h1>
+						@yield('content_header')
+					</h1>
+				</section>
+
+				<section class="content">
+					{!! Notification::showAll() !!}
+					@yield('content')
+				</section>
+			</div>
+
+			<footer class="main-footer clearfix">
+				<div class="pull-right">
+					powered by <a href="#">Maxa Marius</a>
+				</div>
+			</footer>
+		</div>
+
+		{% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
