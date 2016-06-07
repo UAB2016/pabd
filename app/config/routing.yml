@@ -1,5 +1,14 @@
+pabd2_buzenco:
+    resource: "@PABD2BuzencoBundle/Controller/"
+    type:     annotation
+    prefix:   /buzenco
+
 blogger_blog:
     resource: "@BloggerBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+adauga_adaugau:
+    resource: "@AdaugaAdaugauBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:
@@ -14,5 +23,22 @@ admin:
     path:      /admin
     defaults:  { _controller: AppBundle:Admin:index }
 
+adaugau:
+    path: /adaugau
+    defaults: {_controller: AdaugaAdaugauBundle:Adaugau:adauga}	
 
+despre_camelia:
+    path: /despre_camelia
+    defaults: {_controller: AppBundle:DespreCamelia:indexcamelia}
 
+despre_ordace:
+    path: /despre_ordace
+    defaults: {_controller: AppBundle:DespreOrdace:indexordace}
+
+inserare_inserarea:
+    resource: "@InserareInserareaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+inserare_admin:
+    path: /inserare_admin
+    defaults: {_controller: InserareInserareaBundle:Inserarea:inserare}

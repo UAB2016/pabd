@@ -4,6 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: "@BloggerBlogBundle/Resources/config/services.yml" }
     - { resource: @BloggerBlogBundle/Resources/config/config.yml }
+    - { resource: "@PABD2BuzencoBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -41,6 +42,7 @@ assetic:
     filters:
         yui_css:
             jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.6.jar
+        cssrewrite: ~
 
 
 # Doctrine Configuration

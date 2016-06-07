@@ -19,7 +19,11 @@ class AppKernel extends Kernel
 			new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
-            new Blogger\BlogBundle\BloggerBlogBundle()
+            new Blogger\BlogBundle\BloggerBlogBundle(),
+			new Adauga\AdaugauBundle\AdaugaAdaugauBundle(),
+			new Inserare\InserareaBundle\InserareInserareaBundle(),
+			new Lukacs\LukacsBundle\LukacsLukacsBundle(),
+			new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

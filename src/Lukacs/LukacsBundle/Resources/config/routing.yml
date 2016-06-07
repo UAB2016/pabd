@@ -1,0 +1,11 @@
+lukacs_lukacs_homepage_page1:
+    pattern:  /lukacs/page1/{name}
+    defaults: { _controller: LukacsLukacsBundle:Default:page1 }
+    
+lukacs_lukacs_homepage_page2:
+    pattern:  /lukacs/page2/{name}
+    defaults: { _controller: LukacsLukacsBundle:Default:page2 }
+    
+lukacs_lukacs_homepage_form:
+    pattern:  /lukacs/form/
+    defaults: { _controller: LukacsLukacsBundle:Default:form }

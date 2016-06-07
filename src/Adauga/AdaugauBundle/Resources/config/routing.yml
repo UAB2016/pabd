@@ -1,0 +1,4 @@
+adauga_adaugau_homepage:
+    path:     /
+    defaults: { _controller: AdaugaAdaugauBundle:Default:index }
+

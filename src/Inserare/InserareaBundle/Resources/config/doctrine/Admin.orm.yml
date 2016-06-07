@@ -1,0 +1,27 @@
+Inserare\InserareaBundle\Entity\Admin:
+    type: entity
+    table: null
+    repositoryClass: Inserare\InserareaBundle\Repository\AdminRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nume:
+            type: string
+            length: '20'
+        prenume:
+            type: string
+            length: '40'
+        telefon:
+            type: string
+            length: '10'
+        email:
+            type: string
+            length: '40'
+        parola:
+            type: string
+            length: '30'
+    lifecycleCallbacks: {  }

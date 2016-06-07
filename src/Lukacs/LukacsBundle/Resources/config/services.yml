@@ -1,0 +1,7 @@
+parameters:
+#    lukacs_page.example.class: Lukacs\LukacsBundle\Example
+
+services:
+#    Lukacs_page.example:
+#        class: %lukacs_page.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
