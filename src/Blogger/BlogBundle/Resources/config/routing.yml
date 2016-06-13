@@ -100,3 +100,23 @@ BloggerBlogBundle_admin_user_delete:
     defaults: { _controller: BloggerBlogBundle:User:delete }
     requirements:
         _method:  GET
+BloggerBlogBundle_admin_contact_index:
+    pattern:  /admin/contact
+    defaults: { _controller: BloggerBlogBundle:Contact:index }
+    requirements:
+        _method:  GET
+BloggerBlogBundle_admin_contact_show:
+    pattern:  /admin/contact/{id}
+    defaults: { _controller: BloggerBlogBundle:Contact:show }
+    requirements:
+        _method:  GET
+BloggerBlogBundle_admin_contacte_edit:
+    pattern:  /admin/contact/{id}/edit
+    defaults: { _controller: BloggerBlogBundle:Contact:edit }
+    requirements:
+        _method:  GET|POST
+BloggerBlogBundle_admin_contacte_delete:
+    pattern:  /admin/contact/{id}/delete
+    defaults: { _controller: BloggerBlogBundle:Contact:delete }
+    requirements:
+        _method:  GET

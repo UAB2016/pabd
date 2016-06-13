@@ -1,0 +1,34 @@
+
+{# src /Blogger/BlogBundle/Resources/views/Admin/contact/index.html.twig #}
+{% extends 'BloggerBlogBundle:Admin:base.html.twig' %}
+
+
+{% block contentHeader %}
+    
+{% endblock %}
+{% block body %}
+
+ <div>
+ <form action="/edit" method="post">
+    <div>
+        <label for="name">Nume:</label>
+        <input type="text" id="name" name="user_name" />
+    </div>
+    <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_mail" />
+    </div>
+    <div>
+        <label for="msg">Mesaj:</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </div>
+    
+    <div class="button">
+        <button type="submit">Trimite</button>
+    </div>
+</form>
+</div>
+    {{ parent() }}
+
+    
+{% endblock %}
