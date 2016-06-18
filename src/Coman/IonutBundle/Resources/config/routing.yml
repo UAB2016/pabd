@@ -1,3 +1,7 @@
 coman_ionut_homepage:
     path:     /
     defaults: { _controller: ComanIonutBundle:Default:index }
+
+coman_ionut_page:
+    path: /page
+    defaults: { _controller: ComanIonutBundle:Page:index }  
