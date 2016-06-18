@@ -51,11 +51,14 @@ class User implements UserInterface
         return $this->id;
     }
     /**
+     * Implement abstract method required by UserInterface 
+     */
+    public function getUsername() {
+      return $this->username;
+    }
+    /**
      * {@inheritdoc}
      */
-    //  public function getUsername() {
-    //    return $this->username;
-    //  }
     public function getNume()
     {
         return $this->nume;
