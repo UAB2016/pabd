@@ -31,7 +31,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string")
      */
-	
+
     private $prenume;
     /**
      * @ORM\Column(type="string")
@@ -40,7 +40,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", unique=true)
      */
-	 
+
     private $password;
     /**
      * @ORM\Column(type="json_array")
@@ -53,6 +53,9 @@ class User implements UserInterface
     /**
      * {@inheritdoc}
      */
+    //  public function getUsername() {
+    //    return $this->username;
+    //  }
     public function getNume()
     {
         return $this->nume;
