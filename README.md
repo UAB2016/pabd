@@ -10,3 +10,5 @@ Sipos Vasile
 Chisbac Andreea
 
 Buzenco Alexandru
+
+Ionut Coman

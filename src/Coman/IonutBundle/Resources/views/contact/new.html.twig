@@ -1,0 +1,20 @@
+{% extends '@ComanIonut/layout.html.twig' %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block main %}
+    <h1>Contact</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <hr>
+
+    <ul class="list-unstyled">
+        <li>
+            <a class="btn btn-primary" href="{{ path('coman-ionut-blog_contact_index') }}">See All Messages</a>
+        </li>
+    </ul>
+{% endblock %}

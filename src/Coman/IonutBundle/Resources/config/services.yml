@@ -1,0 +1,4 @@
+services:
+#    coman_ionut.example:
+#        class: Coman\IonutBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

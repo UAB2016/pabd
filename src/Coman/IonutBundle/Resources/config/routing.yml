@@ -1,0 +1,7 @@
+coman_ionut_coman-ionut-blog_contact:
+    resource: "@ComanIonutBundle/Resources/config/routing/contact.yml"
+    prefix:   /contact
+
+coman_ionut_homepage:
+    path: /
+    defaults: { _controller: ComanIonutBundle:Page:index }
