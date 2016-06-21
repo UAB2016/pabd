@@ -34,7 +34,7 @@ class PageController extends Controller
 		$request = $this->getRequest();
 		if ($request->getMethod() == 'POST')
 		{
-			$form->bind($request);
+			$form->handleRequest($request);
 			if ($form->isValid())
 			{
 				$message = \Swift_Message::newInstance()
@@ -43,7 +43,11 @@ class PageController extends Controller
 				->setTo($this->container->getParameter('blogger_blog.emails.contact_email'))
 				->setBody($this->renderView('BloggerBlogBundle:Page:contactEmail.txt.twig', array('enquiry' => $enquiry)));
 				$this->get('mailer')->send($message);
-
+				
+				$em=$this->getDoctrine()->getmanager();
+				$em->persist($enquiry);
+				$em->flush();
+		
 				$this->get('session')->getFlashBag()->add('blogger-notice', 'Mesajul a fost trimis cu success. Mulţumim!');
 				
 				// Redirect - This is important to prevent users re-posting
