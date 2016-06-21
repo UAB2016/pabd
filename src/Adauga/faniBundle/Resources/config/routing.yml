@@ -1,0 +1,3 @@
+fani_homepage:
+    path:     /
+    defaults: { _controller: faniBundle:Default:index }
