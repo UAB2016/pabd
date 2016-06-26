@@ -1,3 +1,7 @@
+coman_ionut:
+    resource: "@ComanIonutBundle/Resources/config/routing.yml"
+    prefix:   /coman-ionut
+
 pabd2_buzenco:
     resource: "@PABD2BuzencoBundle/Controller/"
     type:     annotation
@@ -25,7 +29,7 @@ admin:
 
 adaugau:
     path: /adaugau
-    defaults: {_controller: AdaugaAdaugauBundle:Adaugau:adauga}	
+    defaults: {_controller: AdaugaAdaugauBundle:Adaugau:adauga}
 
 despre_camelia:
     path: /despre_camelia
