@@ -24,7 +24,7 @@ class AppKernel extends Kernel
 			new Inserare\InserareaBundle\InserareInserareaBundle(),
 			new Lukacs\LukacsBundle\LukacsLukacsBundle(),
 			new Adauga\faniBundle\faniBundle(),
-			new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle()
+			new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle(),
             new Coman\IonutBundle\ComanIonutBundle(),
         );
 
