@@ -23,9 +23,11 @@ class AppKernel extends Kernel
 			new Adauga\AdaugauBundle\AdaugaAdaugauBundle(),
 			new Inserare\InserareaBundle\InserareInserareaBundle(),
 			new Lukacs\LukacsBundle\LukacsLukacsBundle(),
-			new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle(),
+			new Adauga\faniBundle\faniBundle(),
+			new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle()
             new Coman\IonutBundle\ComanIonutBundle(),
         );
+
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();

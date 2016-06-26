@@ -1,0 +1,27 @@
+Adauga\faniBundle\Entity\Fani:
+    type: entity
+    table: null
+    repositoryClass: Adauga\faniBundle\Repository\FaniRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nume:
+            type: string
+            length: '20'
+        prenume:
+            type: string
+            length: '20'
+        cnp:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: '30'
+        telefon:
+            type: string
+            length: '15'
+    lifecycleCallbacks: {  }
