@@ -1,0 +1,44 @@
+{% extends '@ComanIonut/layout.html.twig' %}
+
+{% block main %}
+    <h1>Contact list</h1>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td><a href="{{ path('coman-ionut-blog_contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.subject }}</td>
+                <td>{{ contact.message }}</td>
+                <td>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="btn btn-default" href="{{ path('coman-ionut-blog_contact_show', { 'id': contact.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <hr>
+
+    <ul class="list-unstyled">
+        <li>
+            <a class="btn btn-primary" href="{{ path('coman-ionut-blog_contact_new') }}">Create a new message</a>
+        </li>
+    </ul>
+{% endblock %}

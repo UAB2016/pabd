@@ -1,0 +1,14 @@
+coman-ionut-blog_contact_index:
+    path:     /
+    defaults: { _controller: "ComanIonutBundle:Contact:index" }
+    methods:  GET
+
+coman-ionut-blog_contact_show:
+    path:     /{id}/show
+    defaults: { _controller: "ComanIonutBundle:Contact:show" }
+    methods:  GET
+
+coman-ionut-blog_contact_new:
+    path:     /new
+    defaults: { _controller: "ComanIonutBundle:Contact:new" }
+    methods:  [GET, POST]

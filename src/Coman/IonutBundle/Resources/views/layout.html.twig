@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Ionut Coman{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% block stylesheets %}
+        {% stylesheets
+        '@ComanIonutBundle/Resources/public/css/bootstrap.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    {% endblock %}
+</head>
+
+<body>
+{% block header %}
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('coman_ionut_homepage') }}">Coman Ionut</a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ path('coman_ionut_homepage') }}">Home</a></li>
+                    <li><a href="{{ path('coman-ionut-blog_contact_new') }}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <section class="col-xs-12 col-md-8">
+                {% block main %}Main{% endblock %}
+            </section>
+            <aside class="col-md-4 hidden-xs">
+                {% block sidebar %}
+                    <h1>Sidebar</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, est explicabo facere iste nam nisi quia repudiandae unde veniam? Eos incidunt magni nesciunt, officia perspiciatis quam quasi sapiente voluptates voluptatibus.
+                    </p>
+                {% endblock %}
+            </aside>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright">
+                    @ 2016 Ionut Coman
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts
+    '@ComanIonutBundle/Resources/public/js/jquery.min.js'
+    '@ComanIonutBundle/Resources/public/js/bootstrap.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}{% endblock %}
+</body>
+</html>
