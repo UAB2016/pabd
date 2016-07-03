@@ -1,0 +1,15 @@
+ionela_mazilu_ionela-mazilu-blog_contact:
+    resource: "@IonelaMaziluBundle/Resources/config/routing/contact.yml"
+    prefix:   /contact
+
+ionela_mazilu_homepage:
+    path: /
+    defaults: { _controller: IonelaMaziluBundle:Page:index }
+
+ionela_mazilu_works:
+    path: /works
+    defaults: { _controller: IonelaMaziluBundle:Page:works }
+
+ionela_mazilu_about:
+    path: /about
+    defaults: { _controller: IonelaMaziluBundle:Page:about }

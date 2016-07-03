@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Ionela Mazilu{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% block stylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/bootstrap.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/fancybox/jquery.fancybox.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/bootstrap-theme.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/slippry.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/color/default.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/font-awesome.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/custom-fonts.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/overwrite.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+        {% stylesheets
+        '@IonelaMaziluBundle/Resources/public/css/style.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+
+    {% endblock %}
+
+
+    {% block javascripts %}
+    {% javascripts
+    '@IonelaMaziluBundle/Resources/public/js/jquery-1.9.1.min.js'
+    '@IonelaMaziluBundle/Resources/public/js/jquery.easing.js' 
+    '@IonelaMaziluBundle/Resources/public/js/classie.js'
+    '@IonelaMaziluBundle/Resources/public/js/bootstrap.js'
+    '@IonelaMaziluBundle/Resources/public/js/slippry.min.js'
+    '@IonelaMaziluBundle/Resources/public/js/nagging-menu.js'
+    '@IonelaMaziluBundle/Resources/public/js/jquery.nav.js'
+    '@IonelaMaziluBundle/Resources/public/js/jquery.scrollTo.js'
+    '@IonelaMaziluBundle/Resources/public/js/jquery.fancybox.pack.js'
+    '@IonelaMaziluBundle/Resources/public/js/jquery.fancybox-media.js'
+    '@IonelaMaziluBundle/Resources/public/js/masonry.pkgd.min.js'
+    '@IonelaMaziluBundle/Resources/public/js/imagesloaded.js'
+    '@IonelaMaziluBundle/Resources/public/js/jquery.nicescroll.min.js'
+    '@IonelaMaziluBundle/Resources/public/js/validate.js'
+    '@IonelaMaziluBundle/Resources/public/js/AnimOnScroll.js'
+    '@IonelaMaziluBundle/Resources/public/js/custom.js'
+    '@IonelaMaziluBundle/Resources/public/js/modernizr.custom.js'
+
+
+ 
+    %}
+     <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% endblock %}
+
+</head>
+
+<body>
+<header>
+
+<div id="navigation" class="navbar navbar-inverse navbar-fixed-top default" role="navigation">
+  <div class="container">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ path('ionela_mazilu_homepage') }}">Ionela Mazilu | Un simplu blog</a>
+    </div>
+
+	<div class="navigation">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="current"><a href="{{ path('ionela_mazilu_homepage') }}">Home</a></li>
+		<li><a href="{{ path('ionela_mazilu_about') }}">About</a></li>
+		<li><a href="{{ path('ionela_mazilu_works') }}">Works</a></li>
+		<li><a href="{{ path('ionela-mazilu-blog_contact_new') }}">Contact</a></li>
+      </ul></nav>
+    </div><!-- /.navbar-collapse -->
+	</div>
+
+  </div>
+</div>
+
+</header>
+<section id="intro">
+<a href="#slide1">{% image '@IonelaMaziluBundle/Resources/public/img/slide/1.jpg' %}<img class="img-responsive" src="{{ asset_url }}" alt="Ionut Coman" />{% endimage %}</a>
+</section>
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <section class="col-xs-12 col-md-8">
+                {% block main %}Main{% endblock %}
+            </section>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+<footer>
+<div class="verybottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="aligncenter">
+				<br \><br \>
+				</div>				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="aligncenter">
+					<p>
+						 &copy;2016 Ionela Mazilu - All right reserved</a>.
+					</p>
+              			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+{% endblock %}
+
+
+</body>
+</html>
