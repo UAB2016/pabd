@@ -1,0 +1,4 @@
+services:
+#    olimpiu_crisan.example:
+#        class: Olimpiu\Bundle\CrisanBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
