@@ -1,3 +1,8 @@
+olimpiu_crisan:
+    resource: "@OlimpiuCrisanBundle/Controller/"
+    type:     annotation
+    prefix:   /OlimpiuCrisan
+
 coman_ionut:
     resource: "@ComanIonutBundle/Resources/config/routing.yml"
     prefix:   /coman-ionut
@@ -46,7 +51,7 @@ palaghiaandrei:
     defaults: {_controller: AppBundle:DespreAndrei:indexandrei}
 adaugafani:
     path: /adaugafani
-    defaults: {_controller: faniBundle:AdaugaFani:adaugafani}	
+    defaults: {_controller: faniBundle:AdaugaFani:adaugafani}
 
 inserare_inserarea:
     resource: "@InserareInserareaBundle/Resources/config/routing.yml"
@@ -55,4 +60,3 @@ inserare_inserarea:
 inserare_admin:
     path: /inserare_admin
     defaults: {_controller: InserareInserareaBundle:Inserarea:inserare}
- 

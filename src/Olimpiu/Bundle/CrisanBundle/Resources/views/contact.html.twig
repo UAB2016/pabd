@@ -1,0 +1,31 @@
+{% extends 'OlimpiuCrisanBundle::base.html.twig' %}
+{% block title %} Contact {% endblock %}
+{% block contactActive %}class="active"{% endblock %}
+{% block body %}
+<br/>
+{% image '@OlimpiuCrisanBundle/Resources/public/images/me.jpg' %}
+<img height="400px" style="float:left" src="{{ asset_url }}" alt="Olimpiu Crisan" />
+{% endimage %}
+<table style="margin-left:10px; float:left">
+    <tr>
+        <td>Name: <td>
+        <td>Crisan Augustin Olimpiu<td>
+    </tr>
+    <tr>
+        <td>Birthday: <td>
+        <td>13-05-1991<td>
+    </tr>
+    <tr>
+        <td>City: <td>
+        <td>Alba Iulia<td>
+    </tr>
+    <tr>
+        <td>University: &nbsp;&nbsp;&nbsp;&nbsp;<td>
+        <td>1 Decembrie 1918<td>
+    </tr>
+    <tr>
+        <td>Skill: <td>
+        <td>Advanced Programming and Databasese<td>
+    </tr>
+</table>
+{% endblock %}
