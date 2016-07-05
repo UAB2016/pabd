@@ -2,14 +2,14 @@ coman_ionut:
     resource: "@ComanIonutBundle/Resources/config/routing.yml"
     prefix:   /coman-ionut
 
+ionela_mazilu:
+    resource: "@IonelaMaziluBundle/Resources/config/routing.yml"
+    prefix:   /ionela-mazilu
+
 pabd2_buzenco:
     resource: "@PABD2BuzencoBundle/Controller/"
     type:     annotation
     prefix:   /buzenco
-
-blogger_blog:
-    resource: "@BloggerBlogBundle/Resources/config/routing.yml"
-    prefix:   /
 
 adauga_adaugau:
     resource: "@AdaugaAdaugauBundle/Resources/config/routing.yml"
@@ -18,10 +18,6 @@ adauga_adaugau:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
-
-user_routes:
-    resource: "@BloggerBlogBundle/Controller"
-    type: annotation
 
 admin:
     path:      /admin
@@ -38,12 +34,15 @@ despre_camelia:
 despre_ordace:
     path: /despre_ordace
     defaults: {_controller: AppBundle:DespreOrdace:indexordace}
+
 fani:
     resource: "@faniBundle/Resources/config/routing.yml"
     prefix:   /
+
 palaghiaandrei:
     path: /palaghiaandrei
     defaults: {_controller: AppBundle:DespreAndrei:indexandrei}
+
 adaugafani:
     path: /adaugafani
     defaults: {_controller: faniBundle:AdaugaFani:adaugafani}	
@@ -55,4 +54,4 @@ inserare_inserarea:
 inserare_admin:
     path: /inserare_admin
     defaults: {_controller: InserareInserareaBundle:Inserarea:inserare}
- 
+

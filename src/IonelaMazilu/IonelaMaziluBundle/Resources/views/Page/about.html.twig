@@ -1,0 +1,22 @@
+{% extends 'IonelaMaziluBundle::layout.html.twig' %}
+
+{% block main %}
+    <header>
+        <h1>Despre mine</h1>
+    </header>
+    <article>
+        <p>Donec imperdiet ante sed diam consequat et dictum erat faucibus. Aliquam sit
+            amet vehicula leo. Morbi urna dui, tempor ac posuere et, rutrum at dui.
+            Curabitur neque quam, ultricies ut imperdiet id, ornare varius arcu. Ut congue
+            urna sit amet tellus malesuada nec elementum risus molestie. Donec gravida
+            tellus sed tortor adipiscing fringilla. Donec nulla mauris, mollis egestas
+            condimentum laoreet, lacinia vel lorem. Morbi vitae justo sit amet felis
+            vehicula commodo a placerat lacus. Mauris at est elit, nec vehicula urna. Duis a
+            lacus nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae.</p>
+    </article>
+ {% image '@IonelaMaziluBundle/Resources/public/img/img1.jpg' %}
+ <img class="img-responsive" src="{{ asset_url }}" width="420" alt="" />
+ {% endimage %}
+
+{% endblock %} 

@@ -1,0 +1,34 @@
+{% extends 'IonelaMaziluBundle::layout.html.twig' %}
+
+{% block main %}
+    <header>
+        <h1>Surse de cod din limbaje cunoscute</h1>
+    </header>
+    <article>
+        <h2> Un simplu Hello World in C++</h2>
+ {% image '@IonelaMaziluBundle/Resources/public/img/img2.jpg' %}
+ <img class="img-responsive" src="{{ asset_url }}" height="300" width="300" alt="" />
+ {% endimage %}
+        <p> #include <iostream>           <br \>
+            using namespace std;          <br \>
+            int main() {                  <br \>
+            cout << "Hello World" << endl;<br \>
+            return 0;                     <br \>
+            }                             <br \>
+        </p>
+
+	<h2> Un simplu Hello World in NodeJS tip HTTP</h2>
+ {% image '@IonelaMaziluBundle/Resources/public/img/img3.png' %}
+ <img class="img-responsive" src="{{ asset_url }}" height="300" width="300" alt="" />
+ {% endimage %}
+	<p> var net = require('net');                                      <br \>
+            var server = net.createServer(function (socket) {              <br \>
+            console.log("Connection from " + socket.remoteAddress);        <br \>
+            socket.end("Hello World\n");                                   <br \>
+            });                                                            <br \>
+            server.listen(7000, "localhost");                              <br \>
+            console.log("TCP server listening on port 7000 at localhost.");<br \>
+        </p>
+    </article>
+{% endblock %} 
+

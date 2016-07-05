@@ -1,0 +1,14 @@
+ionela-mazilu-blog_contact_index:
+    path:     /
+    defaults: { _controller: "IonelaMaziluBundle:Contact:index" }
+    methods:  GET
+
+ionela-mazilu-blog_contact_show:
+    path:     /{id}/show
+    defaults: { _controller: "IonelaMaziluBundle:Contact:show" }
+    methods:  GET
+
+ionela-mazilu-blog_contact_new:
+    path:     /new
+    defaults: { _controller: "IonelaMaziluBundle:Contact:new" }
+    methods:  [GET, POST]
