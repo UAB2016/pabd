@@ -51,7 +51,7 @@ palaghiaandrei:
     defaults: {_controller: AppBundle:DespreAndrei:indexandrei}
 adaugafani:
     path: /adaugafani
-    defaults: {_controller: faniBundle:AdaugaFani:adaugafani}
+    defaults: {_controller: faniBundle:AdaugaFani:adaugafani}  
 
 inserare_inserarea:
     resource: "@InserareInserareaBundle/Resources/config/routing.yml"
