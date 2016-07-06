@@ -60,3 +60,4 @@ inserare_inserarea:
 inserare_admin:
     path: /inserare_admin
     defaults: {_controller: InserareInserareaBundle:Inserarea:inserare}
+
