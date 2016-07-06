@@ -25,8 +25,9 @@ class AppKernel extends Kernel
 			new Lukacs\LukacsBundle\LukacsLukacsBundle(),
 			new Adauga\faniBundle\faniBundle(),
 			new PABD2\Bundle\BuzencoBundle\PABD2BuzencoBundle(),
-            new Coman\IonutBundle\ComanIonutBundle(),
-            new Olimpiu\Bundle\CrisanBundle\OlimpiuCrisanBundle(),
+            		new Coman\IonutBundle\ComanIonutBundle(),
+            		new IonelaMazilu\IonelaMaziluBundle\IonelaMaziluBundle(),
+            		new Olimpiu\Bundle\CrisanBundle\OlimpiuCrisanBundle(),
         );
 
 
